@@ -1,5 +1,9 @@
 ﻿using System;
+using Dominio;
+using Util;
 using ProgramaCAO.Sistema.Solucao;
+using ProgramaCAO.Sistema.Solucao.Dominio;
+
 
 namespace consoleProgramaCAO.Sistema.Solucao
 {
@@ -29,22 +33,35 @@ namespace consoleProgramaCAO.Sistema.Solucao
                     int id = int.Parse(Console.ReadLine());
                     Console.WriteLine("Digite o Nome do cliente: ");
                     string nome = Console.ReadLine();
-                    Console.WriteLine("Digite o CPF do cliente: ");
-                    //ValidaCPF cpf = Console.ReadLine();
+                    
+                        Console.WriteLine("Digite o CPF do cliente: ");
+                    string cpf = Console.ReadLine();
+                    while (Validacao.ValidaCPF(cpf) == false){
+                            cpf = Console.ReadLine();
+                            Console.Write("Digite um CPF valido (apenas números): ");
+                    }
+                    
                     Console.WriteLine("Digite o Telefone do cliente: ");
                     string telefone = Console.ReadLine();
-                    Console.WriteLine("Digite o Endereço do cliente: ");
-                    //Endereco end = Console.ReadLine();
-                    
-                    //Cliente cliente = new Cliente(id,nome,cpf,telefone,end);
-                    // bool cl = cliente.Cadastrar();
+                    Endereco end = new Endereco();
+                    Console.WriteLine("Digite o logradouro do cliente: ");
+                    end.Logradouro = Console.ReadLine();
+                    Console.WriteLine("Digite o número do cliente: ");
+                    end.Numero = Console.ReadLine();
+                    Console.WriteLine("Digite o complemento do cliente: ");
+                    end.Complemento = Console.ReadLine();
+                    Console.WriteLine("Digite o CEP do cliente: ");
+                    end.CEP = Console.ReadLine();
 
-                    //  if(cl == true){
-                    //     Console.WriteLine("Arquivo Criado com sucesso!");
-                    // }
-                    // else{
-                    //     Console.WriteLine("Erro ao gravar!");
-                    // }
+                    Cliente cliente = new Cliente(id,nome,cpf,telefone,end);
+                    bool cl = cliente.Cadastrar();
+
+                    if(cl == true){
+                         Console.WriteLine("Arquivo Criado com sucesso!");
+                    }
+                    else{
+                         Console.WriteLine("Erro ao gravar!");
+                    }
                     
                         break;
 
@@ -62,63 +79,63 @@ namespace consoleProgramaCAO.Sistema.Solucao
                     Console.WriteLine("Digite a idade do animal: ");
                     int idade = int.Parse(Console.ReadLine());
                     
-                    //Animal anim = new Animal(idanimal,nomeanimal,especie,idcliente,genero,idade);
-                    // bool ani = anim.Cadastrar();
+                    Animal anim = new Animal(idanimal,nomeanimal,especie,genero,idade,idcliente);
+                     bool ani = anim.Cadastrar();
 
-                    //  if(ani == true){
-                    //     Console.WriteLine("Arquivo Criado com sucesso!");
-                    // }
-                    // else{
-                    //     Console.WriteLine("Erro ao gravar!");
-                    // }
+                      if(ani == true){
+                         Console.WriteLine("Arquivo Criado com sucesso!");
+                     }
+                     else{
+                         Console.WriteLine("Erro ao gravar!");
+                    }
                         break;
 
                     case "3":
                     Console.WriteLine("Digite o ID do serviço ou produto: ");
                     int idservprod = int.Parse(Console.ReadLine());
                     Console.WriteLine("Digite a descrição do serviço ou produto: ");
-                    string descicao = Console.ReadLine();
+                    string descricao = Console.ReadLine();
                     Console.WriteLine("Digite a preço do serviço ou produto: ");
                     double preco = double.Parse(Console.ReadLine());
                                        
-                    //ServicosProdutos servprod = new ServicosProdutos(idservprod,descricao,preco);
-                    // bool sp = servprod.Cadastrar();
+                    ServicosProdutos servprod = new ServicosProdutos(idservprod,descricao,preco);
+                     bool sp = servprod.Cadastrar();
 
-                    //  if(sp == true){
-                    //     Console.WriteLine("Arquivo Criado com sucesso!");
-                    // }
-                    // else{
-                    //     Console.WriteLine("Erro ao gravar!");
-                    // }
+                      if(sp == true){
+                         Console.WriteLine("Arquivo Criado com sucesso!");
+                     }
+                     else{
+                         Console.WriteLine("Erro ao gravar!");
+                     }
                         break;
                     
                     case "4":
                     Console.WriteLine("Digite o ID do pedido: ");
                     int idpedido = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Digite o ID do cliente: ");
-                    int idclienteped = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Digite o ID do cliente: ");
-                    int idanimalped = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Digite preço total: ");
-                    int precototal = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o nome do cliente: ");
+                    string nomeCliente = Console.ReadLine();
+                    Console.WriteLine("Digite o nome do animal: ");
+                    string nomePet = Console.ReadLine();
+                    Console.WriteLine("Digite a descrição: ");
+                    string descricaoProdutoServico = Console.ReadLine();
                                     
-                    //Pedidos pedidos = new Pedidos(ipedido,idclienteped,idanimalped,precototal);
-                    // bool ped = pedidos.Cadastrar();
+                    Pedido pedidos = new Pedido(idpedido,nomeCliente,nomePet,descricaoProdutoServico);
+                     bool ped = pedidos.Cadastrar();
 
-                    //  if(ped == true){
-                    //     Console.WriteLine("Arquivo Criado com sucesso!");
-                    // }
-                    // else{
-                    //     Console.WriteLine("Erro ao gravar!");
-                    // }
+                      if(ped == true){
+                         Console.WriteLine("Arquivo Criado com sucesso!");
+                     }
+                     else{
+                         Console.WriteLine("Erro ao gravar!");
+                     }
                         break;
                     
                     case "5":
                     Console.WriteLine("Digite o ID do pedido a ser pesquisado:");
                         int pesquisaidpedido = int.Parse(Console.ReadLine());
-                        //Pedido pedpesq = new Pedido();
-                        //string pesquisaidpedido = pedpesq.Pesquisar(pesquisaidpedido);
-                        Console.WriteLine(pesquisaidpedido);
+                        Pedido pedpesq = new Pedido();
+                        string resultadopesquisaidpedido = pedpesq.Consultar(pesquisaidpedido);
+                        Console.WriteLine(resultadopesquisaidpedido);
                                     
                         break;
                     

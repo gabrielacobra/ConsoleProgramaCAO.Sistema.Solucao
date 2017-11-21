@@ -196,6 +196,26 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "PetShop/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PetShop.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetShop.dll": {}
+        }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
       }
     }
   },
@@ -656,11 +676,23 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "PetShop/1.0.0": {
+      "type": "project",
+      "path": "../ProgramaCAO.Sistema.Solucao-master/PetShop.csproj",
+      "msbuildProject": "../ProgramaCAO.Sistema.Solucao-master/PetShop.csproj"
+    },
+    "Util/1.0.0": {
+      "type": "project",
+      "path": "c:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\Util\\Util.csproj",
+      "msbuildProject": "c:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\Util\\Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "PetShop >= 1.0.0",
+      "Util >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -690,7 +722,14 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\PetShop.csproj": {
+              "projectPath": "C:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\PetShop.csproj"
+            },
+            "c:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\Util\\Util.csproj": {
+              "projectPath": "c:\\Users\\fic.INFO\\backend\\ProgramaCAO.Sistema.Solucao-master\\Util\\Util.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

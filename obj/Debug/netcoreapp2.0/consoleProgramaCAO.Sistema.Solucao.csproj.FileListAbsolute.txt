@@ -1,0 +1,12 @@
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.deps.json
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.runtimeconfig.json
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.runtimeconfig.dev.json
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.dll
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.pdb
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\PetShop.dll
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\bin\Debug\netcoreapp2.0\PetShop.pdb
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\obj\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.csproj.CoreCompileInputs.cache
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\obj\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.AssemblyInfoInputs.cache
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\obj\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.AssemblyInfo.cs
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\obj\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.dll
+C:\Users\fic.INFO\backend\consoleProgramaCAO.Sistema.Solucao\obj\Debug\netcoreapp2.0\consoleProgramaCAO.Sistema.Solucao.pdb
