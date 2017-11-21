@@ -1,4 +1,5 @@
 ﻿using System;
+using ProgramaCAO.Sistema.Solucao;
 
 namespace consoleProgramaCAO.Sistema.Solucao
 {
